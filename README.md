@@ -1,16 +1,25 @@
-# location_app
+# Location-Based Flutter App
 
-Location Finder App.
+## Overview
+This Flutter application allows users to input a location (city name or address) and displays it on a map. The app demonstrates key skills in managing user input, integrating maps, and implementing state management.
 
-## Getting Started
+## Features
+- **Location Input:** A simple screen where users can input a location using a text field.
+- **Map Integration:** Displays the entered location on a map with a marker.
+- **Basic Validation:** Ensures that the location input is not left empty.
+- **Error Handling:** Graceful handling of invalid or non-existent locations.
 
-This project is a starting point for a Flutter application.
+## Screens
+1. **Location Input Screen:**
+   - A text field where users can input a location (city name, address, or coordinates).
+   - Basic validation to ensure the field is not left empty.
+   - A button that takes the user to the map screen after the location is entered.
 
-A few resources to get you started if this is your first Flutter project:
+2. **Map Display Screen:**
+   - Displays a map showing the entered location.
+   - The location is marked on the map using a marker.
+   - The map is integrated using a Flutter package like `google_maps_flutter`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Project Structure
+The project is structured to maintain readability and clean code, with proper separation of concerns:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

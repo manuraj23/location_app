@@ -32,11 +32,14 @@ This Flutter application allows users to input a location (city name or address)
 <br>
 ![Screenshot from 2024-10-07 15-33-35](https://github.com/user-attachments/assets/ca2f82d1-c059-4dea-bb9e-7f8bdd3c0264)
 
+
+### Steps to Run the App
+<br>
 ### Prerequisites
 - Ensure you have [Flutter](https://flutter.dev/docs/get-started/install) installed on your machine.
 - You will also need an IDE like Android Studio, Visual Studio Code, or IntelliJ IDEA.
 
-### Steps to Run the App
+
 
 1. **Clone the Repository:**
    Open your terminal and clone the repository:

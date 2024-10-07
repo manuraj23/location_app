@@ -32,3 +32,32 @@ This Flutter application allows users to input a location (city name or address)
 <br>
 ![Screenshot from 2024-10-07 15-33-35](https://github.com/user-attachments/assets/ca2f82d1-c059-4dea-bb9e-7f8bdd3c0264)
 
+### Prerequisites
+- Ensure you have [Flutter](https://flutter.dev/docs/get-started/install) installed on your machine.
+- You will also need an IDE like Android Studio, Visual Studio Code, or IntelliJ IDEA.
+
+### Steps to Run the App
+
+1. **Clone the Repository:**
+   Open your terminal and clone the repository:
+   ```bash
+   git clone https://github.com/manuraj23/location_app/
+
+2.Install Dependencies: Navigate to the project directory and run:
+
+bash
+Copy code
+flutter pub get
+Obtain Google Maps API Key:
+
+Create a project in the Google Cloud Console.
+Enable the Maps SDK for Android and Maps SDK for iOS.
+Create an API key and restrict it to your app's package name (Android) and Bundle ID (iOS).
+
+3. Run the App:
+
+Connect a device or start an emulator.
+Run the app using the following command:
+bash
+Copy code
+flutter run

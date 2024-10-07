@@ -18,13 +18,12 @@ class _MapScreenState extends State<MapScreen> {
   String? _errorMessage;
   MapType _currentMapType = MapType.normal;
   LatLng? _userLocation; // For user's current location
-  String? _userCity; // To store user's current city name
 
   @override
   void initState() {
     super.initState();
     _getCoordinates();
-    _getUserLocation(); // Call to fetch user's current location
+    _getUserLocation();
   }
 
   Future<void> _getCoordinates() async {
@@ -46,7 +45,6 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
-  // Updated method to get user's current location and city name
   Future<void> _getUserLocation() async {
     Location location = new Location();
     bool _serviceEnabled;
@@ -74,15 +72,6 @@ class _MapScreenState extends State<MapScreen> {
       _userLocation = LatLng(_locationData.latitude!, _locationData.longitude!);
     });
 
-    // Get city name from coordinates
-    if (_userLocation != null) {
-      String city = await GeocodingService().getCityFromCoordinates(_userLocation!);
-      setState(() {
-        _userCity = city; // Store the city name
-      });
-    }
-
-    // Move camera to the searched location
     if (_mapController != null && _locationCoordinates != null) {
       _mapController.animateCamera(
         CameraUpdate.newLatLng(_locationCoordinates!),
@@ -152,33 +141,6 @@ class _MapScreenState extends State<MapScreen> {
       ),
       body: Column(
         children: [
-          // Display user location city name just below the app bar
-          if (_userCity != null)
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Your location is:   ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue, // Blue color for "Your location is:"
-                      ),
-                    ),
-                    TextSpan(
-                      text: '$_userCity',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red, // Red color for the user city
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
           Expanded(
             child: _locationCoordinates == null
                 ? Center(

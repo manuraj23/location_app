@@ -21,5 +21,11 @@ This Flutter application allows users to input a location (city name or address)
    - The map is integrated using a Flutter package like `google_maps_flutter`.
 
 ## Project Structure
-The project is structured to maintain readability and clean code, with proper separation of concerns:
+The project is structured to maintain readability and clean code, with proper separation of concerns.
+
+## Screensorts: 
+Main Screen
+![image](https://github.com/user-attachments/assets/3d9f1093-48bd-4bb7-8c1d-6dd15ccab123)
+
+
 

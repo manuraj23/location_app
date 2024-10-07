@@ -171,8 +171,8 @@ class _MapScreenState extends State<MapScreen> {
                   onMapCreated: (controller) => _mapController = controller,
                 ),
                 Positioned(
-                  bottom: 16, // Position at the bottom
-                  left: 16,   // Position on the left
+                  bottom: 16,
+                  left: 16,
                   child: FloatingActionButton(
                     onPressed: _selectMapType,
                     child: Icon(Icons.layers),
